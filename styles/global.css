@@ -1,3 +1,28 @@
+/* =====================
+   STICKY FOOTER LAYOUT
+===================== */
+
+html,
+body {
+  height: 100%;
+}
+
+#__next {
+  height: 100%;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 메인 콘텐츠 영역 */
+.page-content {
+  flex: 1;
+}
+
+
 /* ===================== FOOTER ===================== */
 
 .local-footer {
@@ -91,5 +116,10 @@
   .local-footer-links {
     gap: 10px;
     font-size: 11px;
+  }
+}
+@media (max-width: 768px) {
+  .local-footer {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 }
