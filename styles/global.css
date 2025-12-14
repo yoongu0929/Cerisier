@@ -1,33 +1,95 @@
 /* ===================== FOOTER ===================== */
 
 .local-footer {
+  margin-top: 90px;
   border-top: 1px solid #eee;
-  padding: 32px 16px;
-  margin-top: 60px;
-  font-size: 12px;
-  line-height: 1.6;
-  color: #666;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   background: #fff;
-  z-index: 10;
 }
 
-.local-footer strong {
+.local-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 60px;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.local-footer-line {
+  display: block;
+  margin-bottom: 4px;
+  white-space: normal;
+}
+
+.local-footer-line strong {
+  color: #666;
   font-weight: 500;
-  color: #333;
 }
 
-.local-footer .footer-row {
-  margin-bottom: 6px;
+.local-footer-links {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+}
+
+.local-footer-links a {
+  color: #888;
+  text-decoration: none;
+}
+
+.local-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.local-footer-bottom {
+  margin-top: 14px;
+  font-size: 11px;
+  color: #aaa;
+}
+
+/* TOP button (bottom right) */
+.local-top-btn {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #eee;
+  background: #fff;
+  color: #777;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.local-top-btn.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 1024px) {
+  .local-footer-inner {
+    padding: 20px 32px;
+  }
 }
 
 @media (max-width: 768px) {
-  .local-footer {
-    padding: 24px 12px;
+  .local-footer-inner {
+    padding: 18px 12px;
+    font-size: 11px;
+  }
+  .local-footer-links {
+    gap: 10px;
     font-size: 11px;
   }
 }
