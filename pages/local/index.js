@@ -2,6 +2,8 @@
 const React = require("react");
 const { useEffect, useState } = React;
 const localProducts = require("../../data/localProducts");
+const LocalFooter = require("../../components/LocalFooter");
+
 
 const FAVORITES_KEY = "draperyLocalFavorites";
 
@@ -154,7 +156,8 @@ function LocalProductList() {
           )
         )
       )
-    )
+    ),
+    React.createElement(LocalFooter)
   );
 }
 
@@ -177,7 +180,7 @@ const styles = {
   main: {
     display: "grid",
     gridTemplateColumns: "160px 1fr",
-    padding: "10px 60px 60px",
+    padding: "10px 60px 200px",
     gap: "40px",
   },
   sidebar: {
